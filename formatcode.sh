@@ -18,6 +18,8 @@ if [[ $OS = "Linux" ]] ; then
     NPROC=$(nproc)
 elif [[ ${OS} = "Darwin" ]] ; then
     NPROC=$(sysctl -n hw.physicalcpu)
+elif [[ ${OS} = "FreeBSD" ]] ; then
+    NPROC=$(sysctl -n hw.ncpu)
 fi
 
 # Discover clang-format
