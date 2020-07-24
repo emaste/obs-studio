@@ -545,7 +545,7 @@ static bool valid_extension(const char *ext)
 	if (!ext || !*ext)
 		return false;
 
-	b = EXTENSIONS_MEDIA + 1;
+	b = &EXTENSIONS_MEDIA[1];
 	e = strchr(b, ';');
 
 	for (;;) {
