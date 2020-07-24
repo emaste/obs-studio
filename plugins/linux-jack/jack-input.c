@@ -65,7 +65,7 @@ static void jack_update(void *vptr, obs_data_t *settings)
 		settings_changed = true;
 	}
 
-	if (new_channel_count != data->channels)
+	if (new_channel_count != data->channels)//XXX
 		/*
 		 * keep "old" channel count  for now,
 		 * we need to destroy the correct number of channels

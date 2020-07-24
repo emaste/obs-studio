@@ -152,7 +152,7 @@ void deactivate_jack(struct jack_data *data)
 
 	if (data->jack_client) {
 		if (data->jack_ports != NULL) {
-			for (int i = 0; i < data->channels; ++i) {
+			for (int i = 0; i < data->channels; ++i) {//XXX
 				if (data->jack_ports[i] != NULL)
 					jack_port_unregister(
 						data->jack_client,
