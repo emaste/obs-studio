@@ -357,7 +357,7 @@ RTMP_TLS_LoadCerts(RTMP *r) {
 
     mbedtls_ssl_conf_ca_chain(&r->RTMP_TLS_ctx->conf, chain, NULL);
     return;
-
+// XXX
 error:
     RTMP_Log(RTMP_LOGERROR, "RTMP_TLS_LoadCerts: Failed to load "
         "root certificate chains, RTMPS connections will likely "
