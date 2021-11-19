@@ -173,6 +173,10 @@ static int scanfilter(const struct dirent *entry)
 	return !astrcmp_n(entry->d_name, "video", 5);
 }
 
+#ifdef __FreeBSD__
+#define versionsort alphasort
+#endif
+
 static bool virtualcam_start(void *data)
 {
 	struct virtualcam_data *vcam = (struct virtualcam_data *)data;
